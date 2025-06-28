@@ -20,6 +20,7 @@ import {
 } from "@/hooks/use-file-upload"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 
 
 const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
@@ -58,6 +59,7 @@ const getFileIcon = (file: { file: File | { type: string; name: string } }) => {
 }
 
 export default function ResumeUpload() {
+    const router = useRouter()
     const maxSize = 10 * 1024 * 1024 // 10MB default
     const maxFiles = 1
     const [uploadStatus, setUploadStatus] = useState<Record<string, 'uploading' | 'success' | 'error'>>({});
@@ -91,6 +93,14 @@ export default function ResumeUpload() {
 
             // Set status to 'success'
             setUploadStatus(prev => ({ ...prev, [fileId]: 'success' }));
+            const taskId = data.task_id;
+
+            if (taskId) {
+                router.push(`/resume/${taskId}`);
+            } else {
+                console.error("Upload successful, but no task_id was found in the response.");
+                setUploadStatus(prev => ({ ...prev, [fileId]: 'success' }));
+            }
 
         } catch (error) {
             console.error("Error uploading file:", error);
