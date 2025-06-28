@@ -3,6 +3,7 @@ from pathlib import Path
 from fastapi import FastAPI, UploadFile
 from fastapi.exceptions import HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from langchain_core.documents.base import Document
 from langchain_core.prompts.chat import ChatPromptTemplate
 
@@ -13,6 +14,20 @@ from core.prompt import get_prompt_template
 from core.utils import is_allowed_file, save_file
 
 app: FastAPI = FastAPI()
+
+origins = [
+    "http://localhost:3000",  # Assuming your React app runs on port 3000
+    "http://localhost:3001",
+    # Add any other origins you need
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
