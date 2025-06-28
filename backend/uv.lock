@@ -916,15 +916,15 @@ wheels = [
 
 [[package]]
 name = "langchain-milvus"
-version = "0.2.0"
+version = "0.2.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "langchain-core" },
     { name = "pymilvus" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0a/6d/b016ed8dab435d6f6fa4cae1d5de42eb204105f7afabf3168bc7ed3af37c/langchain_milvus-0.2.0.tar.gz", hash = "sha256:b34846b7faade058a4c37ed454b7776c9e5136d0058bd828dfef29de0345aeaa", size = 31796 }
+sdist = { url = "https://files.pythonhosted.org/packages/3e/dd/5e8b7f6f17da0e54205956feab3f7856cb7dc821dbe817f2990aa028e4cc/langchain_milvus-0.2.1.tar.gz", hash = "sha256:6e60e43959464ae2be9dadceb4fab6b3ddcec5bb1f2d29e898924f1c2651baf1", size = 32639 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/3c/34/8daa975a92daff9cda1125b1ce9b280d3954e886fa76f07eb87cafde6b9a/langchain_milvus-0.2.0-py3-none-any.whl", hash = "sha256:bc7b336dac5120bc4feed040ece598aaf38ae041f6b0f1df2913eb6de29c1fe2", size = 35294 },
+    { url = "https://files.pythonhosted.org/packages/60/b1/54e176cc8ac80df9a2c4ee9f726d6383fcf9818317c68532cfc90fa91b6c/langchain_milvus-0.2.1-py3-none-any.whl", hash = "sha256:faabf4685c15ef9651605172427073d6ffc52c0f36f3b88842977db883062c99", size = 36110 },
 ]
 
 [[package]]
