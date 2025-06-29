@@ -3,7 +3,7 @@ import uuid
 import shutil
 from fastapi import UploadFile, HTTPException
 
-ALLOWED_EXTENSIONS = {".pdf", ".txt", ".jpg", ".png", ".csv"}
+ALLOWED_EXTENSIONS = {".pdf", ".docx"}
 
 
 def validate_file_type(filename: str) -> bool:

@@ -14,4 +14,6 @@ dependencies = [
     "langchain-huggingface>=0.3.0",
     "langchain-milvus>=0.2.0",
     "python-dotenv>=1.1.1",
+    "arize-phoenix-otel>=0.12.1",
+    "openinference-instrumentation-langchain>=0.1.43",
 ]
