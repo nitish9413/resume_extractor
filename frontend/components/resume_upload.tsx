@@ -79,7 +79,7 @@ export default function ResumeUpload() {
         formData.append("file", file);
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume_uploader`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume/resume_uploader`, {
                 method: "POST",
                 body: formData,
             });

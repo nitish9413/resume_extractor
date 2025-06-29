@@ -20,14 +20,14 @@ export default function ResumeResultPage() {
 
         const pollStatus = async () => {
             try {
-                const statusResponse = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume-status/${taskId}`);
+                const statusResponse = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume/resume-status/${taskId}`);
                 if (!statusResponse.ok) throw new Error(`Status check failed`);
 
                 const statusResult = await statusResponse.json();
 
                 if (statusResult === "done") {
                     setStatus("COMPLETED");
-                    const resultResponse = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume_result/${taskId}`);
+                    const resultResponse = await fetch(`${process.env.NEXT_PUBLIC_BE_URL}/resume/resume_result/${taskId}`);
                     if (!resultResponse.ok) throw new Error(`Fetching result failed`);
                     const finalData: ResumeSchema = await resultResponse.json();
                     setResultData(finalData);
