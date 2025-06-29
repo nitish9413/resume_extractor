@@ -19,7 +19,7 @@ class Project(BaseModel):
     description: Optional[str]
     technologies: Optional[List[str]]
 
-class Course(BaseModel):
+class Certification(BaseModel):
     name: str
     provider: Optional[str]
     year: Optional[str]
@@ -38,5 +38,5 @@ class ResumeSchema(BaseModel):
     education: List[Education]
     experience: List[Experience]
     projects: List[Project]
-    courses: List[Course]
+    Certifications: List[Certification]
     publications: List[Publication]
