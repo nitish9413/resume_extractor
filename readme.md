@@ -3,7 +3,4 @@
 
 ## Demo Video
 
-<video width="640" height="360" controls>
-  <source src="./docs/DEMO.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+[![Watch the video](./docs/arch.png)](https://www.youtube.com/watch?v=QDXU5J29EKg)
